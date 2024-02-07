@@ -1,0 +1,38 @@
+.productWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.productWrapper img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+}
+
+.productDesc {
+    position: absolute;
+    bottom: 0;
+    background-color: #1d2a51;
+    width: 70%;
+    padding: 1rem 2rem;
+    margin: 0.5rem;
+    border-radius: 3rem;
+}
+.productHead {
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+}
+
+.priceTag {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: white;
+}

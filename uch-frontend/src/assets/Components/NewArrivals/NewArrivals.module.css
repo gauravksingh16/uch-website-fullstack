@@ -1,0 +1,30 @@
+.newArrivalsWrapper {
+    background: #eef5fb;
+    padding: 1rem;
+}
+
+.newArrivalHead {
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    padding: 1rem;
+    color: #1d2a51;
+    border-bottom: 1px solid#1d2a51;
+}
+
+.newArrivalHead::before {
+    content: "";
+    height: 0.5rem;
+    width: 0.5rem;
+    border-radius: 50%;
+    background: #1d2a51;
+    display: block;
+}
+
+.newArrivalSwiper {
+    padding: 1rem 0;
+}
