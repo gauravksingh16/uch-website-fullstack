@@ -9,6 +9,7 @@
     background-position: center;
     filter:grayscale(0.3);
     overflow: hidden;
+    cursor: none;
 }
 
 .textWrapper {
@@ -56,6 +57,7 @@
     font-weight: 700;
     filter: drop-shadow(2px 2px 10px #505050);
     color: white;
+    cursor: none;
 }
 
 .mouseImg {
@@ -66,4 +68,50 @@
     width: 3vw;
     filter: invert(1);
     transform: rotate(90deg);
+}
+
+.salesLive {
+    position: absolute;
+    top: 6rem;
+    right: 2rem;
+    background-color: white;
+    z-index: 10;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 700;
+    color: #1d2a51;
+    display: flex;
+    box-shadow: #1d2a51 0px 8px 15px -8px;
+}
+.salesLiveText {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.salesLiveText::before {
+    content: "";
+    height: 0.5rem;
+    width: 0.5rem;
+    border-radius: 50%;
+    background: rgb(255, 42, 42);
+    animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+        scale: 0;
+    }
+    50% {
+        opacity: 1;
+        scale: 1;
+    }
+    100% {
+        opacity: 0;
+        scale: 0;
+    }
+    
 }

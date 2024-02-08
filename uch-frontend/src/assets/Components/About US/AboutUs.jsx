@@ -1,13 +1,13 @@
 import React, { useRef, useEffect } from "react";
-import styles from "./Intro.module.css";
+import styles from "./AboutUs.module.css";
 import { gsap } from "gsap";
 
-const Intro = () => {
+const AboutUs = () => {
   const mousePointRef = useRef(null);
 
   useEffect(() => {
     const mousePoint = mousePointRef.current;
-    const heroSection = document.querySelector(`.${styles.heroSection}`);
+    const heroSection = document.querySelector(`.${styles.AboutUsWrapper}`);
 
     const handleMouseMove = (e) => {
       const { clientX, clientY } = e;
@@ -20,7 +20,7 @@ const Intro = () => {
         clientY <= rect.bottom
       ) {
         gsap.to(mousePoint, {
-          x: clientX - rect.left -70,
+          x: clientX - rect.left - 70,
           y: clientY - rect.top - 70,
           scale: 1,
           opacity: 1,
@@ -44,25 +44,23 @@ const Intro = () => {
   }, [mousePointRef]);
 
   return (
-    <div className={styles.heroSection}>
-      <div className={styles.salesLive}>
-        <div className={styles.salesLiveText}>Holi Sale Live Now</div>
-      </div>
-      <div className={styles.mousePoint} ref={mousePointRef}>
-        <div className={styles.mouseText}>Explore the Store</div>
-        <div className={styles.mouseImg}>
+    <div className={styles.AboutUsWrapper}>
+      <div className={styles.mousePoint} ref={mousePointRef}></div>
+      <div className={styles.gradient}></div>
+      <div className={styles.TextContent}>
+        <div>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt est
+          ipsa animi quia odio, facilis quo? Voluptatem ad dolore unde?
+        </div>
+        <div>
           <img
-            src="https://static.thenounproject.com/png/2748-200.png"
+            src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Jon_Kirsch%27s_Signature.png"
             alt=""
           />
         </div>
-      </div>
-      <div className={styles.textWrapper}>
-        <div className={styles.subheading}>Find your own</div>
-        <div className={styles.heading}>Unique Combination.</div>
       </div>
     </div>
   );
 };
 
-export default Intro;
+export default AboutUs;

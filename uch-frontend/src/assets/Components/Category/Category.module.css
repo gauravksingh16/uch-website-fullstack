@@ -1,6 +1,6 @@
 .categoryWrapper {
     background: #eef5fb;
-    padding: 1rem;
+    padding: 1rem 1rem 0 1rem;
 }
 
 .categoryHead {
@@ -27,6 +27,6 @@
 
 .categoryList {
     display: flex;
-    padding: 1rem 0;
+    padding: 1rem 0 0 0;
     gap: 1rem;
 }

@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./Navbar.module.css";
 import logo from "../../Images/UCH_logo.svg";
-import search from "../../Images/magnifying-glass-solid.svg";
-import bag from "../../Images/shopping-bag-svgrepo-com.svg";
+import { HiOutlineShoppingBag } from "react-icons/hi2";
+import { IoIosSearch } from "react-icons/io";
 
 const Navbar = () => {
   return (
@@ -25,10 +25,10 @@ const Navbar = () => {
         </div>
         <div className={styles.loginContainer}>
           <div>
-            <img src={search} alt="" />
+          <IoIosSearch className={styles.icon} color="#1d2a51" size={30}/>
           </div>
           <div>
-            <img src={bag} alt="" />
+            <HiOutlineShoppingBag className={styles.icon} color="#1d2a51" size={30} />
           </div>
           <div className={styles.loginBtn}>
             <div>Login</div>
