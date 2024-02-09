@@ -5,10 +5,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import ProductCard from "../ProductCard/ProductCard";
 
-const NewArrivals = () => {
+const NewArrivals = ({pageTitle}) => {
   return (
     <div className={styles.newArrivalsWrapper}>
-      <div className={styles.newArrivalHead}>Check out our Latest Arrivals</div>
+      <div className={styles.newArrivalHead}>{pageTitle}</div>
       <div className={styles.newArrivalList}>
         <div className={styles.newArrivalsLeft}>
           <ProductCard
