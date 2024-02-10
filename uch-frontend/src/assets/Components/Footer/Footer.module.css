@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+
+.footerWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #1d2a51;
+  padding: 1rem;
+  color: white;
+  gap: 2rem;
+}
+
+.top,
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.logo img {
+  height: 3rem;
+  filter: invert(1);
+}
+
+.newsletter {
+  width: 33%;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  padding: 1rem 0;
+}
+
+.newsletter .newsletterForm {
+  border-bottom: 1px solid rgba(239, 234, 227, 0.3);
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.newsletterInput {
+  background-color: transparent;
+  border: none;
+  color: white;
+  padding: 0.5rem;
+  width: 100%;
+  outline: none;
+}
+
+.newsletterInput::placeholder {
+  color: #ffffff;
+  opacity: 0.5;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+}
+
+button svg {
+  fill: white;
+  transition: all 0.1s ease-in-out;
+}
+
+button:hover svg {
+  transform: rotate(-45deg);
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 33%;
+}
+
+.head {
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-family: "righteous", cursive;
+}
+
+.linklist ul {
+  list-style: none;
+  text-decoration: none;
+  transition: all 0.1s ease-in-out;
+}
+
+.linklist ul li {
+  padding: 0.5rem 0;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.linklist ul li a {
+  text-decoration: none;
+  color: white;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+}
+
+.linklist ul li a:hover {
+  letter-spacing: 0.1rem;
+}
+
+.socialMedia {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-end;
+  justify-content: flex-end;
+  width: 20%;
+}
+
+.icons a {
+  text-decoration: none;
+  color: white;
+  transition: all 0.1s ease-in-out;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.icons a:hover {
+  letter-spacing: 0.1rem;
+}
+
+.bottom div a {
+  text-decoration: none;
+  color: white;
+  transition: all 0.1s ease-in-out;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.bottom {
+  border-top: 1px solid white;
+}
+
+.socialList ul {
+  list-style: none;
+  text-decoration: none;
+  transition: all 0.1s ease-in-out;
+}
+
+.socialList ul li {
+  padding: 0.5rem 0;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  text-align: right;
+}
+
+.socialList ul li a {
+  text-decoration: none;
+  color: white;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+}
+
+.socialList ul li a:hover {
+  letter-spacing: 0.1rem;
+}

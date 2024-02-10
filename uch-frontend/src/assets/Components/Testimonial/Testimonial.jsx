@@ -17,75 +17,73 @@ const Testimonial = () => {
       <div className={styles.testimonialHead}>What Our Customers Say</div>
       <div className={styles.gradient}></div>
       <div className={styles.swiperContainer}>
-      <div>
-      <Swiper
-        loop={true}
-        slidesPerView={3}
-        spaceBetween={16}
-        autoplay={{
-          delay: 0,
-          disableOnInteraction: true,
-        }}
-        speed={3000}
-        modules={[Autoplay]}
-        className={styles.mySwiper}
-      >
-        <SwiperSlide>
-          <TestimonialCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <TestimonialCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <TestimonialCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <TestimonialCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <TestimonialCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <TestimonialCard />
-        </SwiperSlide>
-      </Swiper>
-
-      </div>
-      <div>
-      <Swiper
-        loop={true}
-        slidesPerView={3}
-        spaceBetween={16}
-        autoplay={{
-          delay: 0,
-          disableOnInteraction: true,
-          reverseDirection: true,
-        }}
-        speed={3000}
-        modules={[Autoplay]}
-        className={styles.mySwiper}
-      >
-        <SwiperSlide>
-          <TestimonialCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <TestimonialCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <TestimonialCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <TestimonialCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <TestimonialCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <TestimonialCard />
-        </SwiperSlide>
-      </Swiper>
-      </div>
-
+        <div>
+          <Swiper
+            loop={true}
+            slidesPerView={3}
+            spaceBetween={16}
+            autoplay={{
+              delay: 0,
+              disableOnInteraction: true,
+            }}
+            speed={5000}
+            modules={[Autoplay]}
+            className={styles.mySwiper}
+          >
+            <SwiperSlide>
+              <TestimonialCard />
+            </SwiperSlide>
+            <SwiperSlide>
+              <TestimonialCard />
+            </SwiperSlide>
+            <SwiperSlide>
+              <TestimonialCard />
+            </SwiperSlide>
+            <SwiperSlide>
+              <TestimonialCard />
+            </SwiperSlide>
+            <SwiperSlide>
+              <TestimonialCard />
+            </SwiperSlide>
+            <SwiperSlide>
+              <TestimonialCard />
+            </SwiperSlide>
+          </Swiper>
+        </div>
+        <div>
+          <Swiper
+            loop={true}
+            slidesPerView={3}
+            spaceBetween={16}
+            autoplay={{
+              delay: 0,
+              disableOnInteraction: true,
+              reverseDirection: true,
+            }}
+            speed={5000}
+            modules={[Autoplay]}
+            className={styles.mySwiper}
+          >
+            <SwiperSlide>
+              <TestimonialCard />
+            </SwiperSlide>
+            <SwiperSlide>
+              <TestimonialCard />
+            </SwiperSlide>
+            <SwiperSlide>
+              <TestimonialCard />
+            </SwiperSlide>
+            <SwiperSlide>
+              <TestimonialCard />
+            </SwiperSlide>
+            <SwiperSlide>
+              <TestimonialCard />
+            </SwiperSlide>
+            <SwiperSlide>
+              <TestimonialCard />
+            </SwiperSlide>
+          </Swiper>
+        </div>
       </div>
     </div>
   );

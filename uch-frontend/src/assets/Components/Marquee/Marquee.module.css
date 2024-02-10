@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
+.marqueeContainer {
+    min-height: 5vw;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1d2a51;
+    background-color: #eef5fb;
+
+}
+.marquee {
+    display: flex;
+    gap: 0.2rem;
+}
+
+.marquee div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 2vw;
+    font-family: 'prata', sans-serif;
+    font-style: italic;
+    animation: marqueeAnim 20s linear infinite;
+}
+
+.marquee:hover div {
+    animation-play-state: paused;
+    color: #1d2a51; 
+}
+
+@keyframes marqueeAnim {
+    0%   { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
+}
+
+
+.marquee div a{
+    background-color: #1d2a51;
+    color: #fff;
+    padding: 0.5vw;
+    font-family: 'Righteous', cursive;
+    font-style: normal;
+    margin: 0 0.5rem;
+    text-decoration: none;
+}
