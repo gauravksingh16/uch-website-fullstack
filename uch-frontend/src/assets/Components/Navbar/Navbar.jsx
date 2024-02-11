@@ -3,6 +3,7 @@ import styles from "./Navbar.module.css";
 import logo from "../../Images/UCH_logo.svg";
 import { HiOutlineShoppingBag } from "react-icons/hi2";
 import { IoIosSearch } from "react-icons/io";
+import Button from "../Button/Button";
 
 const Navbar = () => {
   return (
@@ -30,9 +31,7 @@ const Navbar = () => {
           <div>
             <HiOutlineShoppingBag className={styles.icon} color="#1d2a51" size={30} />
           </div>
-          <div className={styles.loginBtn}>
-            <div>Login</div>
-          </div>
+          <Button name="Login" />
         </div>
       </div>
     </div>

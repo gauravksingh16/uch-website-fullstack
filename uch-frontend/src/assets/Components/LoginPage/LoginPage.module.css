@@ -1,0 +1,56 @@
+.LoginContainer {
+    height: 100vh;
+    width: 100vw;
+    background-image: url("https://images.unsplash.com/photo-1576082866986-460d8f2ae4fe?q=80&w=2040&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-position: center, center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginDets {
+    height: 90%;
+    width: 95%;
+    border-radius: 25px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    border: 7px solid #eef5fb;
+    overflow: hidden;
+}
+
+.loginDets .transparentBg {
+    width: 50%;
+    height: 100%;
+    background-color: transparent;
+    border-radius: 30px;
+    position: relative;
+    
+}
+
+.transparentBg > div {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    padding: 1rem;
+}
+
+.intro {
+    font-size: 3vw;
+    font-weight: 500;
+    text-shadow: #1d2a51 1px 1px 10px;
+    font-family: 'Righteous', sans-serif;
+}
+
+.desc {
+    font-size: 1.5vw;
+    font-weight: 400;
+    text-shadow: #1d2a51 1px 1px 10px;
+}
