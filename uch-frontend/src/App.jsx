@@ -1,14 +1,15 @@
 import './App.css'
-import Footer from './assets/Components/Footer/Footer'
-import LoginPage from './assets/Components/LoginPage/LoginPage'
 import Navbar from './assets/Components/Navbar/Navbar'
-import Home from './assets/Pages/Home'
+import Footer from './assets/Components/Footer/Footer'
+import { Outlet } from 'react-router-dom'
 
 function App() {
 
   return (
     <>
-      <LoginPage />
+      <Navbar />
+      <Outlet />
+      <Footer />
     </>
   )
 }

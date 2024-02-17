@@ -1,0 +1,15 @@
+.cartContainer {
+    padding: 1rem;
+}
+
+.cartHead {
+    height: 15vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: 'Righteous', cursive;
+    color: #1d2a51;
+}

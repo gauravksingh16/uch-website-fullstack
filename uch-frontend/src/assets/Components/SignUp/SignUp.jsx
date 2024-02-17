@@ -1,6 +1,8 @@
 import React from 'react'
 import styles from './SignUp.module.css'
 import Button from '../Button/Button'
+import {Link} from 'react-router-dom'
+
 
 const SignUp = () => {
   return (
@@ -19,7 +21,7 @@ const SignUp = () => {
         </div>
       </form>
       <div className={styles.changeForm}>
-        Already have an account? <a href="#">Sign In</a>{" "}
+        Already have an account? <Link to="/login">Sign In</Link>
       </div>
     </div>
   )

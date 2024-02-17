@@ -1,0 +1,91 @@
+.itemContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #e0e0e0;
+    gap: 2rem;
+}
+
+.productContainer{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10vw;
+    width: 100%;
+}
+
+.productImage {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.productImage img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.productDetails {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+}
+
+.counterContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.remove {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: #1d2a51;
+    cursor: pointer;
+}
+
+.counterButton {
+    background-color: #1d2a51;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    font-weight: 400;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 20px;
+    font-family: 'Righteous', cursive;
+}
+
+.quantity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 500;
+    height: 2rem;
+    width: 3rem;
+    border-radius: 5px;
+    background-color: #1d2a510a;
+}
+
+.name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1d2a51;
+}
+
+.price {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #1d2a51;
+}
