@@ -16,17 +16,6 @@ import Cart from "./assets/Pages/Cart.jsx";
 import LoginPage from "./assets/Components/LoginPage/LoginPage.jsx";
 import RegisterPage from "./assets/Components/LoginPage/RegisterPage.jsx";
 
-// const router = createBrowserRouter([
-//   {
-//     path: '/',
-//     element: <App />,
-//     children: [
-//       {path:'', element: <Home />},
-//       { path: 'login', element: <Login /> },
-//     ],
-//   },
-// ])
-
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>

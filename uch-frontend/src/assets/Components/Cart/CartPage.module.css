@@ -12,4 +12,68 @@
     font-weight: 500;
     font-family: 'Righteous', cursive;
     color: #1d2a51;
+    border-bottom: 1px solid #1d2a51;
+    margin-bottom: 1rem;
 }
+
+.cartDetails {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.items {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+}
+
+.totalItems {
+    border: 1px solid #1d2a51;
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 30%;
+    height: 100%;
+    gap: 4vh;
+    color: #1d2a51;
+}
+
+.cartPrice {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    gap: 1rem;
+    border-bottom: 1px dashed #1d2a51;
+    padding: 1rem 0;
+}
+
+.priceDetails {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cartTotal {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+
+.cartPriceText, .cartTotalText {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+
