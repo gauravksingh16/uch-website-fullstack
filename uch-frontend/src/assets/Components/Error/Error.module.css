@@ -1,0 +1,46 @@
+.errorWrapper {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #1d2a51;
+  background: linear-gradient(60deg, #eef5fb,#e3f0fc);
+}
+
+.errorContainer {
+  position: relative;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  z-index: 4;
+}
+
+.errorText, .errorOverlay {
+  position: absolute;
+  font-weight: 400;
+  font-size: 6vw;
+  font-family: "Prata", serif;
+  font-style: italic;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.errorOverlay {
+    z-index: 6;
+    opacity: 0.5;
+}
+
+.errorContainer img {
+  width: 25vw;
+}
+
+.button {
+  width: 20vw;
+}

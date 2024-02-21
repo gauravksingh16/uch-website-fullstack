@@ -132,3 +132,18 @@
 a {
   text-decoration: none;
 }
+
+@media screen and (max-width: 768px){
+  .navMenu {
+    display: none !important;
+  }
+
+  .navRight {
+    padding: 0 1rem;
+    justify-content: flex-end;
+  }
+
+  .navLeft {
+    padding: 1rem;
+  }
+}

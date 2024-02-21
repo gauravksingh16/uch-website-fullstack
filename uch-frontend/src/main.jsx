@@ -15,12 +15,14 @@ import ProductCategory from "./assets/Pages/ProductCategory.jsx";
 import Cart from "./assets/Pages/Cart.jsx";
 import LoginPage from "./assets/Components/LoginPage/LoginPage.jsx";
 import RegisterPage from "./assets/Components/LoginPage/RegisterPage.jsx";
+import Error from "./assets/Components/Error/Error.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
       <Route path="/" element={<App />}>
         <Route path="" element={<Home />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/productcategory" element={<ProductCategory />} />
         <Route path="/productcategory/:id" element={<ProductCategory />} />
         <Route path="/product/:productId" element={<Product />} />
@@ -28,6 +30,7 @@ const router = createBrowserRouter(
       </Route>
       <Route path="/login" element={<LoginPage />} />
       <Route path="/register" element={<RegisterPage />} />
+      <Route path="*" element={<Error />} />
     </>
   )
 );
