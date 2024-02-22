@@ -74,7 +74,7 @@ const Footer = () => {
       </div>
       <div className={styles.bottom}>
         <div>
-          Copyright &copy; 2023 <a href="">UCH</a>. All rights reserved.
+          Copyright &copy; {new Date().getFullYear()} <a href="">UCH</a>. All rights reserved.
         </div>
         <div>
           Designed and Developed by <a href="">Gaurav K Singh</a>

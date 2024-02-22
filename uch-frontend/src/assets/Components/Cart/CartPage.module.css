@@ -76,4 +76,7 @@
     text-transform: uppercase;
 }
 
+.cartCheckout {
+    cursor: pointer;
+}
 
