@@ -1,6 +1,6 @@
 .detsContainer {
   display: flex;
-  gap: 1rem;
+  gap: 5rem;
   padding: 2rem 1rem;
 }
 
@@ -12,13 +12,17 @@
 }
 
 .heading {
-  width: 70%;
+  width: 100%;
   border-bottom: #1d2a516d 1px solid;
   text-transform: uppercase;
   font-size: 1rem;
   font-weight: 700;
   color: #1d2a51;
   padding: 0.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
 }
 
 .specs {
@@ -47,4 +51,13 @@
   width: 3rem;
   color: #1d2a51;
   padding: 0.5rem;
+}
+
+.heading::before {
+    content: "";
+    height: 0.5rem;
+    width: 0.5rem;
+    border-radius: 50%;
+    background: #1d2a51;
+    display: block;
 }
