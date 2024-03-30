@@ -10,11 +10,11 @@ import styles from "./Testimonial.module.css";
 import { Autoplay } from "swiper/modules";
 import TestimonialCard from "../TestimonialCard/TestimonialCard";
 
-const Testimonial = () => {
+const Testimonial = ( {heading} ) => {
   return (
     <div className={styles.testimonialWrapper}>
       <div className={styles.radialBg}></div>
-      <div className={styles.testimonialHead}>What Our Customers Say</div>
+      <div className={styles.testimonialHead}>{heading}</div>
       <div className={styles.gradient}></div>
       <div className={styles.swiperContainer}>
         <div>

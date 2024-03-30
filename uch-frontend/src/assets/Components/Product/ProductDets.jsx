@@ -24,31 +24,31 @@ const ProductDets = () => {
             Specifications
         </div>
         <div className={styles.specsColor}>
-            <IoMdColorPalette />
+            <IoMdColorPalette className={styles.icons} />
             <div>
                 White
             </div>
         </div>
         <div className={styles.specsMaterial}>
-            <GiRolledCloth />
+            <GiRolledCloth className={styles.icons} />
             <div>
                 Cotton
             </div>
         </div>
         <div className={styles.specsFit}>
-            <TbArrowAutofitContentFilled />
+            <TbArrowAutofitContentFilled className={styles.icons} />
             <div>
                 Regular
             </div>
         </div>
         <div className={styles.specsWash}>
-            <BiSolidWasher />
+            <BiSolidWasher className={styles.icons} />
             <div>
                 Machine Wash
             </div>
         </div>
         <div className={styles.specsRatings}>
-            <RiStarSmileFill />
+            <RiStarSmileFill className={styles.icons} />
             <div>
                 4.8
             </div>
