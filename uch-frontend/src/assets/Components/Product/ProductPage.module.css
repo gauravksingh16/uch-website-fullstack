@@ -1,0 +1,96 @@
+.desccontainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 1rem;
+    padding: 0 1rem;
+    transition: all 0.5s ease-in-out;
+}
+
+.productImg, .productDesc, .productTitle {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 1rem;
+    transition: all 0.5s ease-in-out;
+}
+
+.productImg img {
+    width: 100%;
+    object-fit: contain;
+    object-position: top;
+    aspect-ratio: 1/1;
+}
+
+.productImg {
+    width: 40%;
+    overflow-y: hidden;
+}
+
+.productTitle {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 2rem;
+    height: 100%;
+    margin-bottom: 20% ;
+}
+
+.productDesc {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+    justify-content: flex-end;
+    margin-top: 5% ;
+}
+
+.name {
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #1d2a51;
+    font-family: 'Righteous', cursive;
+}
+
+.price {
+    font-size: 1.5rem;
+    color: #1d2a51;
+    font-weight: 700;
+}
+
+.productDesc .heading {
+    font-size: 1rem;
+    color: #1d2a51;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.productDesc .buttongroup {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.sizeContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.imageSelector {
+    display: flex;
+    gap: 1rem;
+}
+
+.imageSelector img {
+    width: 10rem;
+    object-fit: cover;
+    cursor: pointer;
+    aspect-ratio: 1/1;
+}
