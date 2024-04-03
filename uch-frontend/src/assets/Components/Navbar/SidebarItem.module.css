@@ -4,17 +4,34 @@
     cursor: pointer;
     align-items: center;
     transition: background-color 0.3s ease-in-out;
-    font-size: 1rem;
     justify-content: flex-start;
     gap: 1rem;
+    transition: all 0.3 ease-in-out;
 }
 
 .text {
+    display: flex;
     text-align: left;
+    font-size: 1rem; 
+    transition: all 0.3 ease-in-out;
+}
+
+.icon {
+    display: flex;
+    height: 2rem;
+
+    color: #1d2a51;
+    align-items: center;
+    justify-content: center;
 }
 
 .active {
     background-color: #d8ecfd;
     text-transform: uppercase;
     font-weight: 600;
+}
+
+.hidden {
+    display: none !important;
+    transition: all 0.3 ease-in-out;
 }
