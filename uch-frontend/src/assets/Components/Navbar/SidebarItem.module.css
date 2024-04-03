@@ -1,0 +1,20 @@
+.wrapper {
+    display: flex;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    align-items: center;
+    transition: background-color 0.3s ease-in-out;
+    font-size: 1rem;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.text {
+    text-align: left;
+}
+
+.active {
+    background-color: #d8ecfd;
+    text-transform: uppercase;
+    font-weight: 600;
+}
