@@ -38,6 +38,13 @@
     width: 100%;
 }
 
+.icon {
+    height: 2rem;
+    width: 2rem;
+    color: #1d2a51;
+    text-decoration: none;
+}
+
 .head {
     font-size: 2rem;
     font-weight: 600;
@@ -54,4 +61,13 @@
     color: #1d2a51;
     text-transform: uppercase;
     font-weight: 600;
+}
+
+.forgotPassword {
+    color: #1d2a51;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 0.8rem;
+    width: 100%;
+    text-align: right;
 }

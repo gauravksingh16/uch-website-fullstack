@@ -1,8 +1,21 @@
-import React from "react";
+import React, {useState} from "react";
 import styles from "./CartItem.module.css";
 import { AiOutlineDelete } from "react-icons/ai";
 
 const CartItem = () => {
+
+  const [quantity, setQuantity] = useState(1);
+
+  const incrementQuantity = () => {
+    setQuantity(quantity + 1);
+  };
+
+  const decrementQuantity = () => {
+    if (quantity > 1) {
+      setQuantity(quantity - 1);
+    }
+  };
+
   return (
     <div className={styles.itemContainer}>
       <div className={styles.productImage}>
@@ -14,9 +27,9 @@ const CartItem = () => {
           <div className={styles.price}>₹1500.00</div>
         </div>
         <div className={styles.counterContainer}>
-          <button className={styles.counterButton}>-</button>
-          <div className={styles.quantity}>1</div>
-          <button className={styles.counterButton}>+</button>
+          <button className={styles.counterButton} onClick={decrementQuantity}>-</button>
+          <div className={styles.quantity}>{quantity}</div>
+          <button className={styles.counterButton} onClick={incrementQuantity}>+</button>
         </div>
         <div>
           <div className={styles.remove}>

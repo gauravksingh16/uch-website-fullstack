@@ -2,11 +2,15 @@ import React from 'react'
 import styles from './SignUp.module.css'
 import Button from '../Button/Button'
 import {Link} from 'react-router-dom'
+import { GoHomeFill } from "react-icons/go";
 
 
 const SignUp = () => {
   return (
     <div className={styles.loginForm}>
+      <div>
+        <Link to="/"><GoHomeFill className={styles.icon}/></Link>
+      </div>
       <div className={styles.head}>Glad you came!</div>
       <form>
         <input type="text" placeholder="Username" required />
