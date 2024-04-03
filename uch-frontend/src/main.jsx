@@ -32,7 +32,7 @@ const router = createBrowserRouter(
       </Route>
       <Route path="/login" element={<LoginPage />} />
       <Route path="/register" element={<RegisterPage />} />
-      <Route path="*" element={<Error />} />
+      <Route path="/*" element={<Error />} />
       <Route path="/admin" element={<AdminDashboard />} />
     </>
   )
