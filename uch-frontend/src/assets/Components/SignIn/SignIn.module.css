@@ -71,3 +71,14 @@
     width: 100%;
     text-align: right;
 }
+
+@media screen and (max-width: 768px) {
+    .loginForm {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .loginForm form {
+        width: 80%;
+    }
+}

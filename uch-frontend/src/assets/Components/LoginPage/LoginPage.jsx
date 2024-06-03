@@ -18,7 +18,7 @@ const LoginPage = () => {
             </div>
           </div>
         </div>
-        <Routes> {/* Use Routes for conditional rendering */}
+        <Routes>
           <Route path="/" element={<SignIn />} exact />
           <Route path="/register" element={<SignUp />} exact />
           <Route path="*" element={<Navigate to="/login" replace />} />

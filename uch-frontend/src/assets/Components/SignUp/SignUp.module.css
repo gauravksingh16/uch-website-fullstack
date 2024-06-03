@@ -62,3 +62,14 @@
     color: #1d2a51;
     text-decoration: none;
 }
+
+@media screen and (max-width: 768px) {
+    .loginForm {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .loginForm form {
+        width: 80%;
+    }
+}
