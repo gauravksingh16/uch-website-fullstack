@@ -20,7 +20,7 @@ const Testimonial = ( {heading} ) => {
         <div>
           <Swiper
             loop={true}
-            slidesPerView={3}
+            slidesPerView= {1}
             spaceBetween={16}
             autoplay={{
               delay: 0,
@@ -28,6 +28,19 @@ const Testimonial = ( {heading} ) => {
             }}
             speed={5000}
             modules={[Autoplay]}
+            breakpoints={
+              {
+                640: {
+                  slidesPerView: 1,
+                },
+                768: {
+                  slidesPerView: 2,
+                },
+                1024: {
+                  slidesPerView: 3,
+                },
+              }
+            }
             className={styles.mySwiper}
           >
             <SwiperSlide>
@@ -53,7 +66,7 @@ const Testimonial = ( {heading} ) => {
         <div>
           <Swiper
             loop={true}
-            slidesPerView={3}
+            slidesPerView={1}
             spaceBetween={16}
             autoplay={{
               delay: 0,
@@ -61,6 +74,19 @@ const Testimonial = ( {heading} ) => {
               reverseDirection: true,
             }}
             speed={5000}
+            breakpoints={
+              {
+                640: {
+                  slidesPerView: 1,
+                },
+                768: {
+                  slidesPerView: 2,
+                },
+                1024: {
+                  slidesPerView: 3,
+                },
+              }
+            }
             modules={[Autoplay]}
             className={styles.mySwiper}
           >

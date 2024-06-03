@@ -45,3 +45,13 @@
     margin: 0 0.5rem;
     text-decoration: none;
 }
+
+@media screen and (max-width: 768px) {
+    .marquee div {
+        font-size: 3vw;
+    }
+    .marquee div a {
+        padding: 1vw;
+        margin: 0.25rem 0.5rem;
+    }
+}

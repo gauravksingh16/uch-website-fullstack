@@ -61,3 +61,26 @@
 .productDesc:hover .productDetsHidden {
     display: block;
 }
+
+@media screen and (max-width: 768px) {
+    .productDesc{
+        padding: 0.5rem 1rem;
+        margin: 0.5rem;
+    }
+
+    .productHead {
+        font-size: 0.8rem;
+    }
+
+    .priceTag {
+        font-size: 0.5rem;
+    }
+
+    .addToCart {
+        font-size: 1rem;
+    }
+
+    .productDesc:hover .productDetsHidden {
+        display: none;
+    }
+}

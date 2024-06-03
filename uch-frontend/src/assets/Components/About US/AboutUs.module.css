@@ -80,3 +80,18 @@
     backdrop-filter: invert(0.8);
     border-radius: 100px;
 }
+
+@media screen and (max-width: 768px) {
+  .AboutUsWrapper {
+    height: 50vh;
+  }
+
+  .TextContent {
+    font-size: 4.5vw;
+  }
+
+  .TextContent img {
+    height: 10vw;
+  }
+}
+

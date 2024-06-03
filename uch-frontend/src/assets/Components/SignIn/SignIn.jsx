@@ -3,7 +3,7 @@ import styles from "./SignIn.module.css";
 import Button from "../Button/Button";
 import {Link} from 'react-router-dom'
 import { GoHomeFill } from "react-icons/go";
-import axios from 'axios'
+import axios from 'axios';
 
 const SignIn = () => {
   const [data, setData] = useState ({

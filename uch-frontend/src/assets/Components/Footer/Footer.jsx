@@ -76,7 +76,7 @@ const Footer = () => {
         <div>
           Copyright &copy; {new Date().getFullYear()} <a href="">UCH</a>. All rights reserved.
         </div>
-        <div>
+        <div className={styles.designer}>
           Designed and Developed by <a target="_blank" href="https://gauravksingh16.github.io/personal-website/">Gaurav K Singh</a>
         </div>
       </div>
