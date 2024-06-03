@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState , useEffect} from "react";
 import styles from "./Navbar.module.css";
 import logo from "../../Images/UCH_logo.svg";
 import { HiOutlineShoppingBag } from "react-icons/hi2";
@@ -12,6 +12,28 @@ const Navbar = () => {
   const handleSearchClick = () => {
     setIsSearchActive(!isSearchActive);
   };
+
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const fetchUserData = async () => {
+      const token = localStorage.getItem("token");
+      if (token) {
+        try {
+          const response = await axios.get("http://localhost:5000/api/user", {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          });
+          setUser(response.data);
+        } catch (error) {
+          console.error("Error fetching user data", error);
+        }
+      }
+    };
+
+    fetchUserData();
+  }, []);
 
   return (
     <div className={styles.navContainer}>
@@ -46,7 +68,10 @@ const Navbar = () => {
             {isSearchActive ? (
               <button type="submit">
                 <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
-                  <path fill="#1d2a51" d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z" />
+                  <path
+                    fill="#1d2a51"
+                    d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"
+                  />
                 </svg>
               </button>
             ) : (
@@ -63,9 +88,28 @@ const Navbar = () => {
               <div className={styles.cartCount}>0</div>
             </div>
           </Link>
-          <Link to="/login">
-            <Button name="Login" />
-          </Link>
+          {user ? (
+            <>
+              <li>Welcome, {user.name}</li>
+              <li>
+                <a
+                  href="/logout"
+                  onClick={() => {
+                    localStorage.removeItem("token");
+                    window.location = "/";
+                  }}
+                >
+                  <Button name="Logout" />
+                </a>
+              </li>
+            </>
+          ) : (
+            <>
+              <Link to="/login">
+                <Button name="Login" />
+              </Link>
+            </>
+          )}
         </div>
       </div>
     </div>

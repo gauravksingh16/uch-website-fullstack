@@ -1,84 +1,95 @@
 .loginForm {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #eef5fb;
-    border: none;
-    gap: 2rem;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #eef5fb;
+  border: none;
+  gap: 2rem;
 }
 
 .loginForm form {
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: stretch;
-    gap: 1rem;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: stretch;
+  gap: 1rem;
 }
 
 .loginForm form input {
-    width: 100%;
-    padding: 1rem;
-    outline: none;
-    text-decoration: none;
-    border: none;
-    border-radius: 2px;
-    background-color: #1d2a510a;
-    box-sizing: border-box;
+  width: 100%;
+  padding: 1rem;
+  outline: none;
+  text-decoration: none;
+  border: none;
+  border-radius: 2px;
+  background-color: #1d2a510a;
+  box-sizing: border-box;
 }
 
 .loginForm form input::placeholder {
-    color: #1d2a51;
+  color: #1d2a51;
 }
 
 .btn {
-    width: 100%;
+  width: 100%;
 }
 
 .icon {
-    height: 2rem;
-    width: 2rem;
-    color: #1d2a51;
-    text-decoration: none;
+  height: 2rem;
+  width: 2rem;
+  color: #1d2a51;
+  text-decoration: none;
 }
 
 .head {
-    font-size: 2rem;
-    font-weight: 600;
-    color: #1d2a51;
-    font-family: 'Prata', sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1d2a51;
+  font-family: "Prata", sans-serif;
 }
 
 .changeForm {
-    color: #1d2a5196;
+  color: #1d2a5196;
 }
 
 .changeForm a {
-    text-decoration: none;
-    color: #1d2a51;
-    text-transform: uppercase;
-    font-weight: 600;
+  text-decoration: none;
+  color: #1d2a51;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 .forgotPassword {
-    color: #1d2a51;
-    text-decoration: none;
-    font-weight: 400;
-    font-size: 0.8rem;
-    width: 100%;
-    text-align: right;
+  color: #1d2a51;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 0.8rem;
+  width: 100%;
+  text-align: right;
 }
 
 @media screen and (max-width: 768px) {
-    .loginForm {
-        width: 100%;
-        padding: 1rem;
-    }
+  .loginForm {
+    width: 100%;
+    padding: 1rem;
+  }
 
-    .loginForm form {
-        width: 80%;
-    }
+  .loginForm form {
+    width: 80%;
+  }
+}
+
+.error {
+  color: red;
+  background-color: #ffe6e6;
+  border: 1px solid red;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  text-align: center;
+  width: 90%;
 }

@@ -45,7 +45,7 @@ const SignIn = () => {
         <div className={styles.forgotPassword}>
           <Link to="">Forgot Password?</Link>
         </div>
-        {error && window.alert(error)}
+        {error && <div className={styles.error}>{error}</div>}
         <button type="submit" onClick={handleSubmit} className={styles.btn}>
           <Button name="Login" />
         </button>
