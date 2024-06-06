@@ -3,7 +3,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const connect = require("./database/conn.js");
-const router = require("./routes/authRoute.js");
+const authrouter = require("./routes/authRoute.js");
 const app = express();
 
 // Middleware
@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
-app.use('/api', router);
+app.use('/api', authrouter);
 
 connect()
   .then(() => {

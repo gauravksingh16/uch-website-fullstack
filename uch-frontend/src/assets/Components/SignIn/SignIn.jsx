@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import styles from "./SignIn.module.css";
 import Button from "../Button/Button";
-import {Link} from 'react-router-dom'
+import { Link , useNavigate } from 'react-router-dom';
 import { GoHomeFill } from "react-icons/go";
 import axios from 'axios';
 
@@ -10,6 +10,8 @@ const SignIn = () => {
     password: "",
     email: ""
   })
+  
+  const navigate = useNavigate();
 
   const [error, setError] = useState("");
 
@@ -19,19 +21,18 @@ const SignIn = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try{
+    try {
       const url = "http://localhost:5000/api/login";
-      const {data:res} = await axios.post(url, data)
-      localStorage.setItem("token", res.data)
-      window.location = "/"
-      console.log(res.message)
-    }catch(error){ 
-      if(error.response && error.response.status >= 400 && error.response.status <= 500){
-        setError(error.response.data.message)
-        console.log(error.response.data.message)
+      const { data: res } = await axios.post(url, data);
+      localStorage.setItem('token', res.data.token);
+      localStorage.setItem('username', res.data.username);
+      navigate('/');
+    } catch (error) {
+      if (error.response && error.response.status >= 400 && error.response.status <= 500) {
+        setError(error.response.data.message);
       }
     }
-  }
+  };
 
   return (
     <div className={styles.loginForm}>

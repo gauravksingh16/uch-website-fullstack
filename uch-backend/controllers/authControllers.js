@@ -49,10 +49,16 @@ exports.loginUser = async (req, res) => {
     if (!isMatch) {
       return res.status(401).send({ message: 'Invalid credentials' });
     }
-    const token = user.generateAuthToken(); 
-    res.status(200).send({ data: token, message: 'Login successful' });
+    const token = jwt.sign({ _id: user._id }, process.env.JWT_SECRET); // Ensure this line uses the correct secret
+    res.status(200).send({ data: { token, username: user.username }, message: 'Login successful' });
+    console.log(token)
   } catch (error) {
     console.error('Error logging in:', error);
     res.status(500).json({ error: 'Internal server error' });
   }
+};
+
+// Controller method to get authenticated user
+exports.getUser = (req, res) => {
+  res.json(req.user);
 };
