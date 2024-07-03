@@ -7,7 +7,6 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
   Route,
-  Routes,
 } from "react-router-dom";
 import Home from "./assets/Pages/Home";
 import Product from "./assets/Pages/Product.jsx";
@@ -33,7 +32,14 @@ const router = createBrowserRouter(
       <Route path="/login" element={<LoginPage />} />
       <Route path="/register" element={<RegisterPage />} />
       <Route path="/*" element={<Error />} />
-      <Route path="/admin" element={<AdminDashboard />} />
+      <Route path="/admin" element={<AdminDashboard />}>
+        <Route path="" element={<AdminDashboard />} />
+        <Route path="/admin/stats" element={<div>Stats</div>} />
+        <Route path="/admin/orders" element={<div>Orders</div>} />
+        <Route path="/admin/inventory" element={<div>Inventory</div>} />
+        <Route path="/admin/users" element={<div>Users</div>} />
+        <Route path="/admin/billing" element={<div>Billing</div>} />
+      </Route>
     </>
   )
 );

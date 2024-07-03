@@ -3,18 +3,15 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const connect = require("./database/conn.js");
-const authrouter = require("./routes/authRoute.js");
+const authRouter = require("./routes/authRoute.js");
 const app = express();
 
 // Middleware
 app.use(cors());
 app.use(express.json());
 app.disable('x-powered-by');
-app.get("/", (req, res) => {
-  res.send("Hello World!");
-});
 
-app.use('/api', authrouter);
+app.use('/api', authRouter);
 
 connect()
   .then(() => {

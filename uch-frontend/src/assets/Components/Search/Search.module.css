@@ -1,0 +1,19 @@
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.searchBar input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-bottom: #1d2a516d 0.5px solid;
+    padding: 0.5rem;
+    width: 17vw;
+  }
+
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }

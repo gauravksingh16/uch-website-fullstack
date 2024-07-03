@@ -101,3 +101,11 @@
     border-top: #1d2a51 solid 1px;
     border-bottom: #1d2a51 solid 1px;
 }
+
+.colorBtn{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #ffe600;
+}

@@ -9,6 +9,7 @@ import { useUser } from "../../Context/UserContext";
 import { FiPackage } from "react-icons/fi";
 import { IoMdLogOut } from "react-icons/io";
 import { CgProfile } from "react-icons/cg";
+import Search from "../Search/Search";
 
 const Navbar = () => {
   const [isSearchActive, setIsSearchActive] = useState(false);
@@ -55,22 +56,7 @@ const Navbar = () => {
           </div>
         </div>
         <div className={styles.loginContainer}>
-          {isSearchActive && (
-            <div className={styles.searchBar}>
-              <input
-                type="text"
-                placeholder="Search..."
-                className={styles.searchInput}
-              />
-            </div>
-          )}
-          <div className={styles.searchIcon} onClick={handleSearchClick}>
-            {isSearchActive ? (
-              <IoIosClose className={styles.icon} color="#1d2a51" size={30} />
-            ) : (
-              <IoIosSearch className={styles.icon} color="#1d2a51" size={30} />
-            )}
-          </div>
+          <Search />
           <Link to="/cart">
             <div className={styles.cartContainer}>
               <HiOutlineShoppingBag
@@ -84,7 +70,7 @@ const Navbar = () => {
           {usernameInitial ? (
             <div className={styles.userInitial}>
               {usernameInitial}
-              <div class={styles.userDrop}>
+              <div className={styles.userDrop}>
                 <Link to="/profile"><CgProfile /> Profile</Link>
                 <Link to="/orders"><FiPackage /> Orders</Link>
                 <Link to="/" onClick={handleLogoutClick}><IoMdLogOut /> Logout</Link>

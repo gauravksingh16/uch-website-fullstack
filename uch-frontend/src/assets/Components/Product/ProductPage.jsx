@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import styles from "./ProductPage.module.css";
 import Button from "../Button/Button";
 import Marquee from "../Marquee/Marquee";
@@ -40,7 +40,7 @@ const ProductPage = () => {
             id="mainImg"
             src={mainImage}
             alt=""
-            onClick={() => handleMainImageClick(mainImage)}
+            onClick={() => handleImageClick(mainImage)}
           />
         </div>
         <div className={styles.productDesc}>
@@ -77,6 +77,10 @@ const ProductPage = () => {
               <Button name="M" />
               <Button name="L" />
               <Button name="XL" />
+            </div>
+            <div className={styles.heading}>Select Color</div>
+            <div className={styles.buttongroup}>
+              <div className={styles.colorBtn}></div>
             </div>
           </div>
         </div>

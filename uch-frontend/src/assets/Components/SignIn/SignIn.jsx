@@ -1,8 +1,9 @@
-import React, {useState} from "react";
+import {useState} from "react";
 import styles from "./SignIn.module.css";
 import Button from "../Button/Button";
 import { Link , useNavigate } from 'react-router-dom';
 import { GoHomeFill } from "react-icons/go";
+import { API_URL } from "../../../Constants";
 import axios from 'axios';
 
 const SignIn = () => {
@@ -22,7 +23,7 @@ const SignIn = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const url = "http://localhost:5000/api/login";
+      const url = `${API_URL}/login`;
       const { data: res } = await axios.post(url, data);
       localStorage.setItem('token', res.data.token);
       localStorage.setItem('username', res.data.username);
