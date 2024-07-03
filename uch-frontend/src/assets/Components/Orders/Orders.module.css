@@ -19,6 +19,12 @@
     text-transform: uppercase;
 }
 
+.actionGrp {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
 .listContent {
     padding: 1rem;
 }
@@ -39,15 +45,3 @@
     padding: 1rem;
     border-bottom: #1d2a51 1px solid;
 }
-
-.actionGrp {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-}
-
-tbody {
-    overflow-y: auto;
-    max-height: 70vh;
-}
-

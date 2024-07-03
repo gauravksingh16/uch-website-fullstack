@@ -16,6 +16,8 @@ import RegisterPage from "./assets/Components/LoginPage/RegisterPage.jsx";
 import Error from "./assets/Components/Error/Error.jsx";
 import CartPage from "./assets/Components/Cart/CartPage.jsx";
 import AdminDashboard from "./assets/Pages/AdminDashboard.jsx";
+import Orders from './assets/Components/Orders/Orders'
+import Inventory from './assets/Components/Inventory/Inventory'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -33,10 +35,10 @@ const router = createBrowserRouter(
       <Route path="/register" element={<RegisterPage />} />
       <Route path="/*" element={<Error />} />
       <Route path="/admin" element={<AdminDashboard />}>
-        <Route path="" element={<AdminDashboard />} />
+        <Route path="" element={<Orders />} />
         <Route path="/admin/stats" element={<div>Stats</div>} />
-        <Route path="/admin/orders" element={<div>Orders</div>} />
-        <Route path="/admin/inventory" element={<div>Inventory</div>} />
+        <Route path="/admin/orders" element={<Orders />} />
+        <Route path="/admin/inventory" element={<Inventory />} />
         <Route path="/admin/users" element={<div>Users</div>} />
         <Route path="/admin/billing" element={<div>Billing</div>} />
       </Route>
