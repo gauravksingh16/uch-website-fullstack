@@ -12,6 +12,13 @@
     padding: 1rem;
 }
 
+.secNotch {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
 .heading {
     font-size: 1rem;
     font-family: Righteous, cursive;
@@ -26,8 +33,14 @@
 }
 
 .icon {
-    font-size: 1.5rem;
-    color: #1d2a51;
+    font-size: 1rem;
+    color: white;
+    background-color: #1d2a51;
+    border-radius: 50%;
+    height: 1.5rem;
+    width: 1.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
 }
 
 .cardContent {
@@ -91,3 +104,36 @@
     font-size: 0.8rem;
     color:#1d2a5180;
 }
+
+.tables {
+    padding: 1rem;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: space-between;
+    justify-content: center;
+}
+
+table{
+    width: 100%;
+    table-layout: auto;
+}
+
+td {
+    padding: 0.5rem;
+    text-align: center;
+    border-bottom: 1px solid #1d2a5180;
+}
+
+th {
+    padding: 0.5rem;
+    text-align: center;
+    background-color: #1d2a51;
+    color: white;
+}
+
+.userTable, .orderTable {
+    width: 100%;
+    border-collapse: collapse;
+    overflow-y: scroll;
+}
+
