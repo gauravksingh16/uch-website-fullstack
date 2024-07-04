@@ -18,6 +18,7 @@ import CartPage from "./assets/Components/Cart/CartPage.jsx";
 import AdminDashboard from "./assets/Pages/AdminDashboard.jsx";
 import Orders from './assets/Components/Orders/Orders'
 import Inventory from './assets/Components/Inventory/Inventory'
+import Dashboard from "./assets/Components/Dashboard/Dashboard.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -35,7 +36,7 @@ const router = createBrowserRouter(
       <Route path="/register" element={<RegisterPage />} />
       <Route path="/*" element={<Error />} />
       <Route path="/admin" element={<AdminDashboard />}>
-        <Route path="" element={<Orders />} />
+        <Route path="" element={<Dashboard />} />
         <Route path="/admin/stats" element={<div>Stats</div>} />
         <Route path="/admin/orders" element={<Orders />} />
         <Route path="/admin/inventory" element={<Inventory />} />

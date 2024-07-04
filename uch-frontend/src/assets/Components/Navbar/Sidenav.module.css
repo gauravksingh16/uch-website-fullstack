@@ -38,6 +38,7 @@
     align-items: center;
     border-top: #1d2a51 1px solid;
     justify-content: space-between;
+    width: max-content;
 }
 
 .navBottom img {
