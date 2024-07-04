@@ -1,0 +1,58 @@
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.Notch {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding: 1rem;
+}
+
+.heading {
+    font-size: 1rem;
+    font-family: Righteous, cursive;
+    color: #1d2a51;
+    text-transform: uppercase;
+}
+
+.actionGrp {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.listContent {
+    padding: 1rem;
+}
+
+.table {
+    width: 100%;
+    text-align: center;
+    table-layout: auto;
+}
+
+.table th {
+    background-color: #1d2a51;
+    color: white;
+    padding: 1rem;
+}
+
+.table td {
+    padding: 1rem;
+    border-bottom: #1d2a51 1px solid;
+}
+
+.icon {
+    font-size: 1rem;
+    color: white;
+    background-color: #1d2a51;
+    border-radius: 50%;
+    height: 1.5rem;
+    width: 1.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+}

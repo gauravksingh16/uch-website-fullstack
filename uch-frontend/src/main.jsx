@@ -19,6 +19,7 @@ import AdminDashboard from "./assets/Pages/AdminDashboard.jsx";
 import Orders from './assets/Components/Orders/Orders'
 import Inventory from './assets/Components/Inventory/Inventory'
 import Dashboard from "./assets/Components/Dashboard/Dashboard.jsx";
+import Users from "./assets/Components/Users/Users.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -40,7 +41,7 @@ const router = createBrowserRouter(
         <Route path="/admin/stats" element={<div>Stats</div>} />
         <Route path="/admin/orders" element={<Orders />} />
         <Route path="/admin/inventory" element={<Inventory />} />
-        <Route path="/admin/users" element={<div>Users</div>} />
+        <Route path="/admin/users" element={<Users />} />
         <Route path="/admin/billing" element={<div>Billing</div>} />
       </Route>
     </>
