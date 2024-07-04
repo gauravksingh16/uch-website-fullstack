@@ -20,6 +20,7 @@ import Orders from './assets/Components/Orders/Orders'
 import Inventory from './assets/Components/Inventory/Inventory'
 import Dashboard from "./assets/Components/Dashboard/Dashboard.jsx";
 import Users from "./assets/Components/Users/Users.jsx";
+import Statistics from "./assets/Components/Statistics/Statistics.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -38,7 +39,7 @@ const router = createBrowserRouter(
       <Route path="/*" element={<Error />} />
       <Route path="/admin" element={<AdminDashboard />}>
         <Route path="" element={<Dashboard />} />
-        <Route path="/admin/stats" element={<div>Stats</div>} />
+        <Route path="/admin/stats" element={<Statistics />} />
         <Route path="/admin/orders" element={<Orders />} />
         <Route path="/admin/inventory" element={<Inventory />} />
         <Route path="/admin/users" element={<Users />} />

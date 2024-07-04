@@ -94,6 +94,34 @@ const Users = () => {
                 <td>7970755957</td>
                 <td>12/12/2021</td>
             </tr>
+            <tr>
+              <td>U1</td>
+              <td>John Doe</td>
+              <td>jhondoe@xyz.com</td>
+                <td>7970755957</td>
+                <td>12/12/2021</td>
+            </tr>
+            <tr>
+              <td>U1</td>
+              <td>John Doe</td>
+              <td>jhondoe@xyz.com</td>
+                <td>7970755957</td>
+                <td>12/12/2021</td>
+            </tr>
+            <tr>
+              <td>U1</td>
+              <td>John Doe</td>
+              <td>jhondoe@xyz.com</td>
+                <td>7970755957</td>
+                <td>12/12/2021</td>
+            </tr>
+            <tr>
+              <td>U1</td>
+              <td>John Doe</td>
+              <td>jhondoe@xyz.com</td>
+                <td>7970755957</td>
+                <td>12/12/2021</td>
+            </tr>
           </tbody>
         </table>
       </div>
