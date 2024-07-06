@@ -21,6 +21,7 @@ import Inventory from './assets/Components/Inventory/Inventory'
 import Dashboard from "./assets/Components/Dashboard/Dashboard.jsx";
 import Users from "./assets/Components/Users/Users.jsx";
 import Statistics from "./assets/Components/Statistics/Statistics.jsx";
+import Billings from "./assets/Components/Billings/Billings.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -43,7 +44,7 @@ const router = createBrowserRouter(
         <Route path="/admin/orders" element={<Orders />} />
         <Route path="/admin/inventory" element={<Inventory />} />
         <Route path="/admin/users" element={<Users />} />
-        <Route path="/admin/billing" element={<div>Billing</div>} />
+        <Route path="/admin/billing" element={<Billings />} />
       </Route>
     </>
   )

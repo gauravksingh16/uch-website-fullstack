@@ -1,6 +1,6 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import styles from "./SidebarItem.module.css";
-import { SidebarContext } from "./Sidenav.jsx";
+import { SidebarContext } from "../../Context/SidebarContext";
 
 const SidebarItem = ({ icon, text, active, onClick }) => {
   const { expanded } = useContext(SidebarContext);
