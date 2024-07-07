@@ -22,6 +22,8 @@ import Dashboard from "./assets/Components/Dashboard/Dashboard.jsx";
 import Users from "./assets/Components/Users/Users.jsx";
 import Statistics from "./assets/Components/Statistics/Statistics.jsx";
 import Billings from "./assets/Components/Billings/Billings.jsx";
+import { UserProvider } from './assets/Context/UserContext.jsx';
+import AdminRoute from "./assets/Components/AdminRoutes/AdminRoute.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -38,7 +40,11 @@ const router = createBrowserRouter(
       <Route path="/login" element={<LoginPage />} />
       <Route path="/register" element={<RegisterPage />} />
       <Route path="/*" element={<Error />} />
-      <Route path="/admin" element={<AdminDashboard />}>
+      <Route path="/admin" element={
+        <AdminRoute>
+          <AdminDashboard />
+        </AdminRoute>
+      }>
         <Route path="" element={<Dashboard />} />
         <Route path="/admin/stats" element={<Statistics />} />
         <Route path="/admin/orders" element={<Orders />} />
@@ -52,6 +58,8 @@ const router = createBrowserRouter(
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <UserProvider>
+      <RouterProvider router={router} />
+    </UserProvider>
   </React.StrictMode>
 );

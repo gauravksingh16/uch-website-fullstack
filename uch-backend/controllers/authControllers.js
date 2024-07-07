@@ -1,7 +1,7 @@
-const {User, validate} = require('../models/User');
-const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken');
-const Joi = require('joi');
+const { User, validate } = require("../models/User");
+const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
+const Joi = require("joi");
 
 // Controller method for user registration
 exports.registerUser = async (req, res) => {
@@ -11,28 +11,29 @@ exports.registerUser = async (req, res) => {
       return res.status(400).send({ message: error.details[0].message });
     }
 
-    const existingUser = await User.findOne({ email:req.body.email });
+    const existingUser = await User.findOne({ email: req.body.email });
     if (existingUser) {
-      return res.status(409).send({ message: 'User already exists' });
+      return res.status(409).send({ message: "User already exists" });
     }
 
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(req.body.password, salt);
 
-    await new User({...req.body, password: hashedPassword}).save();
-    res.status(201).send({message: 'User registered successfully'});
-  } catch(error){
-    res.status(500).send({ message: 'Internal server error' });
+    await new User({ ...req.body, password: hashedPassword }).save();
+    res.status(201).send({ message: "User registered successfully" });
+  } catch (error) {
+    res.status(500).send({ message: "Internal server error" });
   }
 };
 
-const loginValidate = async (data) => {
+// Validation function for login data
+const loginValidate = (data) => {
   const schema = Joi.object({
     email: Joi.string().email().required(),
     password: Joi.string().required(),
   });
-  return schema.validate(data)
-}
+  return schema.validate(data);
+};
 
 // Controller method for user login
 exports.loginUser = async (req, res) => {
@@ -41,20 +42,41 @@ exports.loginUser = async (req, res) => {
     if (error) {
       return res.status(400).send({ message: error.details[0].message });
     }
-    const user = await User.findOne({ email: req.body.email });
-    if (!user) {
-      return res.status(401).send({ message: 'Invalid credentials' });
+
+    const { email, password } = req.body;
+    let role = "user";
+    let user;
+
+    if (email === process.env.ADMIN_EMAIL) {
+      // Compare the plain text password with the admin password from .env
+      if (password !== process.env.ADMIN_PASSWORD) {
+        return res.status(400).json({ message: "Invalid credentials" });
+      }
+      role = "admin";
+      user = { _id: "admin", username: "Admin" }; // Mock admin user object
+    } else {
+      user = await User.findOne({ email });
+
+      if (!user) {
+        return res.status(401).json({ message: "User not found" });
+      }
+
+      const isMatch = await bcrypt.compare(password, user.password);
+
+      if (!isMatch) {
+        return res.status(401).json({ message: "Invalid credentials" });
+      }
     }
-    const isMatch = await bcrypt.compare(req.body.password, user.password);
-    if (!isMatch) {
-      return res.status(401).send({ message: 'Invalid credentials' });
-    }
-    const token = jwt.sign({ _id: user._id }, process.env.JWT_SECRET); // Ensure this line uses the correct secret
-    res.status(200).send({ data: { token, username: user.username }, message: 'Login successful' });
-    console.log(token)
+
+    const token = jwt.sign({ _id: user._id, role }, process.env.JWT_SECRET); // Ensure this line uses the correct secret
+    res.status(200).send({
+      data: { token, username: user.username, role },
+      message: "Login successful",
+    });
+    console.log(token);
   } catch (error) {
-    console.error('Error logging in:', error);
-    res.status(500).json({ error: 'Internal server error' });
+    console.error("Error logging in:", error);
+    res.status(500).json({ error: "Internal server error" });
   }
 };
 

@@ -1,23 +1,25 @@
-import {useState} from "react";
+// src/assets/Components/LoginPage/SignIn.jsx
+import { useState } from "react";
 import styles from "./SignIn.module.css";
 import Button from "../Button/Button";
-import { Link , useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { GoHomeFill } from "react-icons/go";
 import { API_URL } from "../../../Constants";
 import axios from 'axios';
+import { useUser } from '../../Context/UserContext';
 
 const SignIn = () => {
-  const [data, setData] = useState ({
+  const [data, setData] = useState({
     password: "",
     email: ""
-  })
-  
-  const navigate = useNavigate();
+  });
 
+  const navigate = useNavigate();
+  const { loginUser } = useUser();
   const [error, setError] = useState("");
 
-  const handleChange = ({currentTarget: input}) => {
-    setData({...data, [input.name]: input.value});
+  const handleChange = ({ currentTarget: input }) => {
+    setData({ ...data, [input.name]: input.value });
   };
 
   const handleSubmit = async (e) => {
@@ -25,9 +27,13 @@ const SignIn = () => {
     try {
       const url = `${API_URL}/login`;
       const { data: res } = await axios.post(url, data);
-      localStorage.setItem('token', res.data.token);
-      localStorage.setItem('username', res.data.username);
-      navigate('/');
+      const { token, username, role } = res.data;
+      loginUser(token, username, role);
+      if (role === 'admin') {
+        navigate('/admin');
+      } else {
+        navigate('/');
+      }
     } catch (error) {
       if (error.response && error.response.status >= 400 && error.response.status <= 500) {
         setError(error.response.data.message);
@@ -38,7 +44,7 @@ const SignIn = () => {
   return (
     <div className={styles.loginForm}>
       <div>
-        <Link to="/"><GoHomeFill className={styles.icon}/></Link>
+        <Link to="/"><GoHomeFill className={styles.icon} /></Link>
       </div>
       <div className={styles.head}>Welcome back!</div>
       <form onSubmit={handleSubmit}>
