@@ -4,6 +4,7 @@ import { FaCaretUp, FaCaretDown } from "react-icons/fa";
 import Search from "../Search/Search";
 import { GoPlus } from "react-icons/go";
 import { MdOutlineFileDownload } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const Dashboard = () => {
   return (
@@ -105,7 +106,7 @@ const Dashboard = () => {
             <div className={styles.heading}>Orders</div>
             <div className={styles.actionGrp}>
               <Search />
-              <GoPlus className={styles.icon}/>
+              <Link to="/admin/orders/add"><GoPlus className={styles.icon}/></Link>
             </div>
           </div>
           <table>

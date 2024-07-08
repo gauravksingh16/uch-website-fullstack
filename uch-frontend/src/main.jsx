@@ -24,6 +24,8 @@ import Statistics from "./assets/Components/Statistics/Statistics.jsx";
 import Billings from "./assets/Components/Billings/Billings.jsx";
 import { UserProvider } from './assets/Context/UserContext.jsx';
 import AdminRoute from "./assets/Components/AdminRoutes/AdminRoute.jsx";
+import AddProduct from "./assets/Components/AddProduct/AddProduct.jsx";
+import AddOrder from "./assets/Components/AddOrder/AddOrder.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -48,7 +50,9 @@ const router = createBrowserRouter(
         <Route path="" element={<Dashboard />} />
         <Route path="/admin/stats" element={<Statistics />} />
         <Route path="/admin/orders" element={<Orders />} />
+        <Route path="/admin/orders/add" element={<AddOrder />} />
         <Route path="/admin/inventory" element={<Inventory />} />
+        <Route path="/admin/inventory/add" element={<AddProduct />} />
         <Route path="/admin/users" element={<Users />} />
         <Route path="/admin/billing" element={<Billings />} />
       </Route>

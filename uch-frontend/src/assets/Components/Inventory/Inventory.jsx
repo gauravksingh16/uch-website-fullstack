@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Button from "../Button/Button";
 import Search from "../Search/Search";
 import styles from "./Inventory.module.css";
@@ -9,7 +10,7 @@ const Inventory = () => {
         <div className={styles.heading}>Listed Products</div>
         <div className={styles.actionGrp}>
           <Search />
-          <Button name={"Add Product"} />
+          <Link to="/admin/inventory/add"><Button name={"Add Product"} /></Link>
         </div>
       </div>
       <div className={styles.listContent}>

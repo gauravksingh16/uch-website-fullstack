@@ -1,0 +1,61 @@
+.wrapper {
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.heading {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-family: Righteous, cursive;
+    color: #1d2a51;
+}
+
+.subheading {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-family: Righteous, cursive;
+    color: #1d2a51;
+}
+
+.addItems {
+    display: flex;
+    gap: 1rem;
+    justify-content: left;
+}
+
+.addItems > div {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+input {
+    padding: 0.5rem;
+    border: 1px solid #1d2a51;
+    border-radius: 5px;
+}
+
+select {
+    padding: 0.5rem;
+    border: 1px solid #1d2a51;
+    border-radius: 5px;
+}
+
+.address {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+} 
+
+.address > div {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.address > div > input {
+    width: 60%;
+}

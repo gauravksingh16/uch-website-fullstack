@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Button from "../Button/Button";
 import Search from "../Search/Search";
 import styles from "./Orders.module.css";
@@ -9,7 +10,7 @@ const Orders = () => {
         <div className={styles.heading}>Orders</div>
         <div className={styles.actionGrp}>
           <Search />
-          <Button name={"Add Order"} />
+          <Link to="/admin/orders/add"><Button name={"Add Order"} /></Link>
         </div>
       </div>
       <div className={styles.listContent}>
