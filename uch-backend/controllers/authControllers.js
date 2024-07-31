@@ -2,6 +2,10 @@ const { User, validate } = require("../models/User");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const Joi = require("joi");
+const Counter = require("../models/Counter")
+const createCsvWriter = require("csv-writer").createObjectCsvWriter;
+const fs = require("fs");
+const path = require("path");
 
 // Controller method for user registration
 exports.registerUser = async (req, res) => {
@@ -19,7 +23,16 @@ exports.registerUser = async (req, res) => {
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(req.body.password, salt);
 
-    await new User({ ...req.body, password: hashedPassword }).save();
+    // Get the next unique ID
+    const counter = await Counter.findOneAndUpdate(
+      { name: 'userId' },
+      { $inc: { count: 1 } },
+      { new: true, upsert: true }
+    );
+
+    const uniqueId = counter.count;
+
+    await new User({ ...req.body, password: hashedPassword, id: uniqueId }).save();
     res.status(201).send({ message: "User registered successfully" });
   } catch (error) {
     res.status(500).send({ message: "Internal server error" });
@@ -73,14 +86,9 @@ exports.loginUser = async (req, res) => {
       data: { token, username: user.username, role },
       message: "Login successful",
     });
-    console.log(token);
   } catch (error) {
     console.error("Error logging in:", error);
     res.status(500).json({ error: "Internal server error" });
   }
 };
 
-// Controller method to get authenticated user
-exports.getUser = (req, res) => {
-  res.json(req.user);
-};

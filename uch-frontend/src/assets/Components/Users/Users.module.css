@@ -56,3 +56,7 @@
     padding: 0.5rem;
     cursor: pointer;
 }
+
+.actionGrp > button:hover {
+    transform: none;
+}
